@@ -54,10 +54,12 @@ public class DefaultPredictionPopupWindow extends BasePredictionPopupWindow {
     @Override
     public void show() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            showAtLocation(appBar, Gravity.NO_GRAVITY, 0, (int) (appBar.getHeight() + ViewUtils.pxFromDp(getContext(), 25)));
+//             showAtLocation(appBar, Gravity.NO_GRAVITY, 0, (int) (appBar.getHeight() + ViewUtils.pxFromDp(getContext(), 25)));
+            showAtLocation(appBar, Gravity.NO_GRAVITY, 0, 200);
         } else {
             showAsDropDown(appBar);
         }
+        
     }
 
     public RecyclerView getRecycler() {
